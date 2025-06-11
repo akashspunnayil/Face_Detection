@@ -32,6 +32,7 @@ def run_face_detection():
                 center = (x + ex + ew//2, y + ey + eh//2)
                 radius = int(round((ew + eh) * 0.25))
                 cv2.circle(frame, center, radius, (0, 255, 0), 2)
+                cv2.putText(frame, "Eye", (center[0] - 10, center[1] - radius - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
 
             smiles = smile_cascade.detectMultiScale(roi_gray, 1.7, 22)
             for (sx, sy, sw, sh) in smiles:
