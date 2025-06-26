@@ -69,7 +69,7 @@ if mode == "📸 Take Photo / Upload Image":
             result = detect_faces_on_image(img)
     
             if result is not None:
-                st.image(cv2.cvtColor(result, cv2.COLOR_BGR2RGB), caption="Detected Facial Features", use_container_width=True)
+                st.image(cv2.cvtColor(result, cv2.COLOR_BGR2RGB), caption="Detected Facial Features", width=700)#, use_container_width=True)
             else:
                 st.error("⚠️ Detection failed: Result is empty.")
         except Exception as e:
