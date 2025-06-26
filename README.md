@@ -1,5 +1,7 @@
 # Haarcascade Face Detection App (Streamlit)
 
+[View App](https://a-face-detection-app.streamlit.app/)
+
 A lightweight face detection web app using OpenCV Haarcascades to detect faces, eyes, and smiles from camera input or uploaded images.
 
 ## Objective
