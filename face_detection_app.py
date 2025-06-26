@@ -51,7 +51,7 @@ class LiveFaceDetector(VideoProcessorBase):
 
 
 # === Streamlit App Layout ===
-st.title("👀 Face Detection App (📸 + 📹)")
+st.title("🙂 Face Detection App (📸 + 📹)")
 
 mode = st.radio("Select Mode", ["📸 Take Photo / Upload Image", "📹 Live Webcam Detection"])
 
@@ -61,7 +61,7 @@ if mode == "📸 Take Photo / Upload Image":
     if img_data:
         img = Image.open(img_data)
         result = detect_faces_on_image(img)
-        st.image(cv2.cvtColor(result, cv2.COLOR_BGR2RGB), caption="Detected Facial Features", use_column_width=True)
+        st.image(cv2.cvtColor(result, cv2.COLOR_BGR2RGB), caption="Detected Facial Features", use_container_width=True)
 
 elif mode == "📹 Live Webcam Detection":
     st.warning("Allow webcam access for real-time detection.")
